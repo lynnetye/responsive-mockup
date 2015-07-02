@@ -3,14 +3,14 @@ header {
   border-bottom: 2px solid $section-border-color;
   display: flex;
   justify-content: space-between;
-  padding: 0px 140px;
+  padding: 0px $max-section-padding;
 
   @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
-    padding: 0px 80px;
+    padding: 0px $mid-section-padding;
   }
 
   @media screen and (max-width: $media-min-width) {
-    padding: 0px 10px;
+    padding: 0px $min-section-padding;
     min-width: 380px;
   }
 
