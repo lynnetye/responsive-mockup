@@ -9,7 +9,7 @@ header {
     padding: 0px 80px;
   }
 
-  @media screen and (max-width: $media-min-width){
+  @media screen and (max-width: $media-min-width) {
     padding: 0px 10px;
     min-width: 380px;
   }

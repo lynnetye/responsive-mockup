@@ -2,6 +2,23 @@
   background-color: $background-color-gray;
   border-bottom: 2px solid $section-border-color;
   padding: 100px 140px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    padding: 100px 80px;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    padding: 100px 10px;
+    min-width: 380px;
+  }
+
+  @media only screen
+    and (min-device-width: $min-device-width)
+    and (max-device-width: $min-device-width)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+      padding: 100px 10px;
+    }
 }
 
 .title-text-container {
@@ -20,6 +37,11 @@
 .hero-button-container {
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: $media-min-width) {
+    align-items: center;
+    min-width: 380px;
+  }
 }
 
 .hero .button {
