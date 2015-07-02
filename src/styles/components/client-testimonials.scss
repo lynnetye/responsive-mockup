@@ -1,25 +1,26 @@
 .client-testimonials {
   border-bottom: 2px solid $section-border-color;
-  padding: 70px 100px;
+  padding: 80px 140px;
 }
 
 .client-testimonial-title {
   background-color: $dark-gray;
   border-radius: 3px;
   height: 40px;
-  margin: 0px auto 50px;
+  margin: 0px auto;
   width: 450px;
 }
 
 .testimonials-container {
   display: flex;
   justify-content: space-around;
+  margin-top: 60px;
 }
 
 .client-testimonial-example {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  min-width: 220px;
   width: 220px;
 }
 

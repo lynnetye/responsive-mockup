@@ -3,7 +3,7 @@
   border-bottom: 2px solid $section-border-color;
   display: flex;
   flex-direction: column;
-  padding: 100px 130px;
+  padding: 120px 160px;
 }
 
 .step-1,
@@ -15,14 +15,14 @@
 
 .step-1,
 .step-2 {
-  margin-bottom: 90px;
+  margin-bottom: 120px;
 }
 
 .step-image {
   background-color: $dark-gray;
   border-radius: 3px;
   height: 250px;
-  width: 320px;
+  width: 40%;
 }
 
 .step-description-container {
@@ -32,7 +32,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  width: 650px;
+  width: 60%;
 }
 
 .step-number {
@@ -61,14 +61,14 @@
   border-radius: 3px;
   height: 30px;
   margin-bottom: 20px;
-  width: 400px;
+  width: 80%;
 }
 
 .step-text {
   background-color: $medium-gray;
   border-radius: 3px;
   height: 20px;
-  width: 450px;
+  width: 85%;
 }
 
 .step-text:not(:last-child) {

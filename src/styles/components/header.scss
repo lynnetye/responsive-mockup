@@ -3,7 +3,24 @@ header {
   border-bottom: 2px solid $section-border-color;
   display: flex;
   justify-content: space-between;
-  padding: 0px 100px;
+  padding: 0px 140px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    padding: 0px 80px;
+  }
+
+  @media screen and (max-width: $media-min-width){
+    padding: 0px 10px;
+    min-width: 380px;
+  }
+
+  @media only screen
+    and (min-device-width: $min-device-width)
+    and (max-device-width: $min-device-width)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+      padding: 0px 10px;
+    }
 }
 
 .button {
@@ -11,6 +28,16 @@ header {
   border-radius: 5px;
   height: 35px;
   width: 120px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    height: 30px;
+    width: 100px;
+  }
+
+  @media screen and (max-width: $media-min-width){
+    height: 25px;
+    width: 80px;
+  }
 }
 
 .logo {
@@ -19,4 +46,14 @@ header {
   height: 50px;
   margin: 10px 0px;
   width: 250px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    height: 30px;
+    width: 150px;
+  }
+
+  @media screen and (max-width: $media-min-width){
+    height: 20px;
+    width: 100px;
+  }
 }

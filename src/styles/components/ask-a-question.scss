@@ -4,7 +4,7 @@
   border-bottom: 2px solid $section-border-color;
   display: flex;
   flex-direction: column;
-  padding: 70px 100px;
+  padding: 70px 140px;
 }
 
 .ask-a-question-title {
@@ -39,6 +39,7 @@
 }
 
 .ask-a-question .button {
+  background-color: $medium-gray;
   margin: 0px;
   height: 39px;
   width: 200px;
