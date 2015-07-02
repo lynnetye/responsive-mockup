@@ -1,0 +1,45 @@
+.ask-a-question {
+  align-items: center;
+  background-color: $background-color-gray;
+  border-bottom: 2px solid $section-border-color;
+  display: flex;
+  flex-direction: column;
+  padding: 70px 100px;
+}
+
+.ask-a-question-title {
+  background-color: $dark-gray;
+  border-radius: 3px;
+  height: 40px;
+  margin-bottom: 40px;
+  width: 300px;
+}
+
+.ask-a-question-input {
+  background-color: $background-color-white;
+  border-radius: 5px;
+  height: 35px;
+  width: 750px;
+}
+
+.email-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+  width: 750px;
+}
+
+.email-input {
+  background-color: $background-color-white;
+  border-radius: 5px;
+  height: 35px;
+  margin-right: 50px;
+  width: 650px;
+}
+
+.ask-a-question .button {
+  margin: 0px;
+  height: 39px;
+  width: 200px;
+}

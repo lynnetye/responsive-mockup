@@ -1,0 +1,34 @@
+.footer {
+  background-color: hsl(0, 0%, 20%);
+  border-bottom: 2px solid $section-border-color;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 100px;
+}
+
+.options,
+.locations,
+.social-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.options-title,
+.locations-title,
+.social-media-title {
+  background-color: $medium-gray;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  height: 10px;
+  width: 100px;
+}
+
+.option-link:not(:last-child),
+.location-link:not(:last-child),
+.social-media-link:not(:last-child) {
+  background-color: $light-gray;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  height: 8px;
+  width: 100px;
+}

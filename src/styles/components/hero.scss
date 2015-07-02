@@ -1,0 +1,32 @@
+.hero {
+  background-color: $background-color-gray;
+  border-bottom: 2px solid $section-border-color;
+  padding: 100px;
+}
+
+.title-text-container {
+  margin-bottom: 80px;
+}
+
+.title-text {
+  background-color: $dark-gray;
+  border-radius: 3px;
+  font-family: $font-family-section-title;
+  height: 20px;
+  margin-bottom: 30px;
+  width: 500px;
+}
+
+.hero-button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero .button {
+  height: 50px;
+  width: 200px;
+}
+
+.hero .button:not(:last-child) {
+  margin-bottom: 30px;
+}

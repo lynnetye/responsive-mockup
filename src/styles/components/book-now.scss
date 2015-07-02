@@ -1,0 +1,25 @@
+.book-now {
+  background-color: $background-color-gray;
+  border-bottom: 2px solid $section-border-color;
+  padding: 50px 100px;
+}
+
+.book-now-title {
+  background-color: $dark-gray;
+  border-radius: 3px;
+  height: 20px;
+  margin: 0px auto 30px;
+  width: 300px;
+}
+
+.book-now-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.book-now .button {
+  background-color: $medium-gray;
+  margin: 0px 10px;
+  height: 50px;
+  width: 200px;
+}

@@ -1,0 +1,76 @@
+.how-it-works {
+  background-color: $background-color-gray;
+  border-bottom: 2px solid $section-border-color;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 130px;
+}
+
+.step-1,
+.step-2,
+.step-3 {
+  display: flex;
+  position: relative;
+}
+
+.step-1,
+.step-2 {
+  margin-bottom: 90px;
+}
+
+.step-image {
+  background-color: $dark-gray;
+  border-radius: 3px;
+  height: 250px;
+  width: 320px;
+}
+
+.step-description-container {
+  align-items: center;
+  border: 2px solid $light-gray;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 650px;
+}
+
+.step-number {
+  background-color: $light-gray;
+  border-radius: 100%;
+  color: $medium-gray;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 56px;
+  padding: 27px 42px;
+  position: absolute;
+}
+
+.step-1 .step-number,
+.step-3 .step-number {
+  left: -50px;
+  top: -50px;
+}
+
+.step-2 .step-number {
+  right: -50px;
+  top: -50px;
+}
+
+.step-title {
+  background-color: $dark-gray;
+  border-radius: 3px;
+  height: 30px;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.step-text {
+  background-color: $medium-gray;
+  border-radius: 3px;
+  height: 20px;
+  width: 450px;
+}
+
+.step-text:not(:last-child) {
+  margin-bottom: 15px;
+}
