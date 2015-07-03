@@ -1,7 +1,24 @@
 .book-now {
   background-color: $background-color-gray;
   border-bottom: 2px solid $section-border-color;
-  padding: 50px 140px;
+  padding: 50px $max-section-padding;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    padding: 50px $mid-section-padding;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    padding: 50px $min-section-padding;
+    min-width: 380px;
+  }
+
+  @media only screen
+    and (min-device-width: $min-device-width)
+    and (max-device-width: $min-device-width)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+      padding: 50px $min-section-padding;
+    }
 }
 
 .book-now-title {
@@ -15,6 +32,17 @@
 .book-now-button-container {
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: $media-min-width) {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.book-now .button:not(:last-child) {
+  @media screen and (max-width: $media-min-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .book-now .button {
