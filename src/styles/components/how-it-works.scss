@@ -1,28 +1,97 @@
 .how-it-works {
+  align-items: center;
   background-color: $background-color-gray;
   border-bottom: 2px solid $section-border-color;
   display: flex;
   flex-direction: column;
-  padding: 120px 160px;
+  padding: 120px 200px;
+
+  @media screen and (max-width: $media-max-width) and (min-width: $media-mid-width) {
+    padding: 120px $max-section-padding;
+  }
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    padding: 100px $mid-section-padding;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    padding: 100px $min-section-padding;
+    min-width: 380px;
+  }
+
+  @media only screen
+    and (max-device-width: $min-device-width)
+    and (min-device-width: $min-device-width)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+      padding: 100px $min-section-padding;
+    }
+}
+
+.step-container {
+  position: relative;
+
+  @media screen and (max-width: $media-min-width) {
+    position: initial;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.step-container.odd-step {
+  align-self: flex-start;
+
+  @media screen and (max-width: $media-max-width) {
+    align-self: center;
+  }
+}
+
+.step-container.even-step {
+  align-self: flex-end;
+
+  @media screen and (max-width: $media-max-width) {
+    align-self: center;
+  }
+}
+
+.step-container:not(:last-child) {
+  margin-bottom: 120px;
+
+  @media screen and (max-width: $media-min-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .step-1,
 .step-2,
 .step-3 {
   display: flex;
-  position: relative;
 }
 
-.step-1,
-.step-2 {
+.step-box {
+  align-self: flex-start;
   margin-bottom: 120px;
+}
+
+.step-3 {
+  align-self: flex-end;
 }
 
 .step-image {
   background-color: $dark-gray;
   border-radius: 3px;
   height: 250px;
-  width: 40%;
+  width: 250px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    height: 200px;
+    width: 200px;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    height: 130px;
+    width: 130px;
+  }
 }
 
 .step-description-container {
@@ -32,10 +101,19 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  width: 60%;
+  width: 450px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    width: 350px;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    width: 280px;
+  }
 }
 
 .step-number {
+  align-self: flex-start;
   background-color: $light-gray;
   border-radius: 100%;
   color: $medium-gray;
@@ -43,17 +121,37 @@
   font-size: 56px;
   padding: 27px 42px;
   position: absolute;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    padding: 15px 30px;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    align-self: center;
+    margin-bottom: 30px;
+    position: initial;
+  }
 }
 
-.step-1 .step-number,
-.step-3 .step-number {
-  left: -50px;
-  top: -50px;
+.step-number-1,
+.step-number-3 {
+  left: -60px;
+  top: -60px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    left: -40px;
+    top: -40px;
+  }
 }
 
-.step-2 .step-number {
-  right: -50px;
-  top: -50px;
+.step-number-2 {
+  right: -60px;
+  top: -60px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    right: -40px;
+    top: -40px;
+  }
 }
 
 .step-title {
@@ -62,15 +160,23 @@
   height: 30px;
   margin-bottom: 20px;
   width: 80%;
+
+  @media screen and (max-width: $media-min-width) {
+    width: 160px;
+  }
 }
 
-.step-text {
+.step-body {
   background-color: $medium-gray;
   border-radius: 3px;
   height: 20px;
   width: 85%;
+
+  @media screen and (max-width: $media-min-width) {
+    width: 160px;
+  }
 }
 
-.step-text:not(:last-child) {
+.step-body:not(:last-child) {
   margin-bottom: 15px;
 }

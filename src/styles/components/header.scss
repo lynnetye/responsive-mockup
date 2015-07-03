@@ -19,7 +19,7 @@ header {
     and (max-device-width: $min-device-width)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: portrait) {
-      padding: 0px 10px;
+      padding: 0px $min-section-padding;
     }
 }
 
