@@ -2,8 +2,25 @@
   align-items: center;
   border-bottom: 2px solid $section-border-color;
   display: flex;
-  justify-content: space-around;
-  padding: 70px 140px;
+  justify-content: space-between;
+  padding: 70px $max-section-padding;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    padding: 100px $mid-section-padding;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    padding: 80px $min-section-padding;
+    min-width: 380px;
+  }
+
+  @media only screen
+    and (max-device-width: $min-device-width)
+    and (min-device-width: $min-device-width)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+      padding: 80px $min-section-padding;
+    }
 }
 
 .vet-example {
@@ -18,6 +35,10 @@
   margin-bottom: 50px;
   height: 240px;
   width: 240px;
+
+  @media screen and (max-width: $media-min-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .vet-name {
@@ -26,6 +47,10 @@
   height: 20px;
   margin-bottom: 20px;
   width: 300px;
+
+  @media screen and (max-width: $media-min-width) {
+    width: 250px;
+  }
 }
 
 .vet-bio {
@@ -33,6 +58,18 @@
   border-radius: 3px;
   height: 10px;
   width: 480px;
+
+  @media screen and (max-width: $media-min-width) {
+    width: 380px;
+  }
+
+    @media only screen
+      and (max-device-width: $min-device-width)
+      and (min-device-width: $min-device-width)
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: portrait) {
+        width: 340px;
+    }
 }
 
 .vet-bio:not(:last-child) {
