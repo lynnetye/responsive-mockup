@@ -4,7 +4,24 @@
   border-bottom: 2px solid $section-border-color;
   display: flex;
   flex-direction: column;
-  padding: 70px 140px;
+  padding: 70px $max-section-padding;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    padding: 100px $mid-section-padding;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    padding: 100px $min-section-padding;
+    min-width: 380px;
+  }
+
+  @media only screen
+    and (max-device-width: $min-device-width)
+    and (min-device-width: $min-device-width)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+      padding: 100px $min-section-padding;
+    }
 }
 
 .ask-a-question-title {
@@ -13,6 +30,10 @@
   height: 40px;
   margin-bottom: 40px;
   width: 300px;
+
+  @media screen and (max-width: $media-min-width) {
+
+  }
 }
 
 .ask-a-question-input {
@@ -20,14 +41,32 @@
   border-radius: 5px;
   height: 35px;
   width: 750px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    width: 90%;
+  }
 }
 
 .email-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 30px;
   width: 750px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+  }
 }
 
 .email-input {
@@ -36,6 +75,15 @@
   height: 35px;
   margin-right: 50px;
   width: 650px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    width: 75%;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    margin-right: 0px;
+    width: 100%;
+  }
 }
 
 .ask-a-question .button {
@@ -43,4 +91,12 @@
   margin: 0px;
   height: 39px;
   width: 200px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    width: 20%;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    margin-top: 40px;
+  }
 }
