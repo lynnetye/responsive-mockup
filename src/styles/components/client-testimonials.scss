@@ -1,6 +1,23 @@
 .client-testimonials {
   border-bottom: 2px solid $section-border-color;
-  padding: 80px 140px;
+  padding: 80px $max-section-padding;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    padding: 80px $mid-section-padding;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    padding: 80px $min-section-padding;
+    min-width: 380px;
+  }
+
+  @media only screen
+    and (max-device-width: $min-device-width)
+    and (min-device-width: $min-device-width)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+      padding: 80px $min-section-padding;
+    }
 }
 
 .client-testimonial-title {
@@ -9,32 +26,62 @@
   height: 40px;
   margin: 0px auto;
   width: 450px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    width: 350px;
+  }
 }
 
 .testimonials-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 60px;
+
+  @media screen and (max-width: $media-min-width) {
+    justify-content: space-around;
+  }
+
 }
 
 .client-testimonial-example {
   display: flex;
   flex-direction: column;
-  min-width: 220px;
-  width: 220px;
+  width: 180px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    width: 155px;
+  }
+}
+
+.client-testimonial-example:last-child {
+  @media screen and (max-width: $media-min-width) {
+    display: none;
+  }
 }
 
 .client-testimonial-client-container {
   align-items: center;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: $media-min-width) {
+    flex-direction: column;
+  }
 }
 
 .client-testimonial-photo {
   background-color: $dark-gray;
   border-radius: 100%;
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
+
+  @media screen and (max-width: $media-min-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .client-info-container {
@@ -53,12 +100,20 @@
 
 .client-testimonial-name {
   background-color: $medium-gray;
-  width: 100px;
+  width: 90px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    width: 70px;
+  }
 }
 
 .client-testimonial-city {
   background-color: $light-gray;
-  width: 120px;
+  width: 100px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    width: 80px;
+  }
 }
 
 .client-testimonial-quote {
