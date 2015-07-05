@@ -3,7 +3,26 @@
   border-bottom: 2px solid $section-border-color;
   display: flex;
   justify-content: space-between;
-  padding: 30px 140px;
+  padding: 30px $max-section-padding;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    padding: 30px $mid-section-padding;
+  }
+
+  @media screen and (max-width: $media-min-width) {
+    align-items: center;
+    flex-direction: column;
+    min-width: 380px;
+    padding: 30px $min-section-padding;
+  }
+
+  @media only screen
+    and (min-device-width: $min-device-width)
+    and (max-device-width: $min-device-width)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+      padding: 30px $min-section-padding;
+    }
 }
 
 .options,
@@ -17,7 +36,18 @@
 
 .options,
 .help-and-contact {
+  @media screen and (max-width: $media-min-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.options,
+.help-and-contact {
   border-right: 2px solid $dark-gray;
+
+  @media screen and (max-width: $media-min-width) {
+    border-right: none;
+  }
 }
 
 .options-title,
@@ -51,4 +81,8 @@
   margin: 20px 10px 0px;
   height: 30px;
   width: 30px;
+
+  @media screen and (max-width: $media-mid-width) and (min-width: $media-min-width) {
+    margin: 15px 5px 0px;
+  }
 }
